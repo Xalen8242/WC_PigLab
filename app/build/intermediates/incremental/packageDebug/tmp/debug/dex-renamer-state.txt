@@ -1,0 +1,4 @@
+#Tue Oct 06 14:50:45 PDT 2020
+base.0=D\:\\SYC\\Cs371\\lab6\\PigGameStarter-master\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out
+path.0=classes.dex
+renamed.0=classes.dex
