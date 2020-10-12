@@ -18,12 +18,12 @@ public class PigGameState extends GameState {
         this.dieValue = 0;
     }
     public PigGameState(PigGameState name){
-        PigGameState copy = name;
-        copy.ID = name.ID;
-        copy.p1Score = name.p1Score;
-        copy.p2Score = name.p2Score;
-        copy.runningTotal = name.runningTotal;
-        copy.dieValue = name.dieValue;
+
+        this.ID = name.ID;
+        this.p1Score = name.p1Score;
+        this.p2Score = name.p2Score;
+        this.runningTotal = name.runningTotal;
+        this.dieValue = name.dieValue;
 
     }
 
