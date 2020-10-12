@@ -156,7 +156,7 @@ public abstract class GameComputerPlayer implements GamePlayer, Tickable {
 	 * 			the object representing the information from the game
 	 */
 	protected abstract void receiveInfo(GameInfo info);
-	
+
 	/**
 	 * Helper-class to post a message to this player's thread
 	 *
