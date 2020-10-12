@@ -43,17 +43,49 @@ public class PigSmartComputerPlayer extends GameComputerPlayer {
         PigGameState copy = (PigGameState) info;
         if(copy.getID() == playerNum){
 
-
-            if(50-copy.getP1Score() > 40 || 50-copy.getP2Score() > 40){
-                    if(copy.getRunningTotal() > 3){
-                        PigHoldAction hold = new PigHoldAction(this);
-                        game.sendAction(hold);
-                    }
-                    else{
-                        PigRollAction roll = new PigRollAction(this);
-                        game.sendAction(roll);
+            if(copy.getP2Score() >= 40 || copy.getP1Score() >= 40) {
+                if (copy.getID() == 0) {
+                    if (copy.getP1Score() >= 40) {
+                        if (copy.getRunningTotal() > 3) {
+                            PigHoldAction hold = new PigHoldAction(this);
+                            game.sendAction(hold);
+                        } else {
+                            PigRollAction roll = new PigRollAction(this);
+                            game.sendAction(roll);
+                        }
+                    } else if (copy.getP2Score() >= 40) {
+                        if (copy.getRunningTotal() > 10) {
+                            PigHoldAction hold = new PigHoldAction(this);
+                            game.sendAction(hold);
+                        } else {
+                            PigRollAction roll = new PigRollAction(this);
+                            game.sendAction(roll);
+                        }
                     }
                 }
+               else {
+                    if (copy.getP2Score() >= 40) {
+                        if (copy.getRunningTotal() > 3) {
+                            PigHoldAction hold = new PigHoldAction(this);
+                            game.sendAction(hold);
+                        } else {
+                            PigRollAction roll = new PigRollAction(this);
+                            game.sendAction(roll);
+                        }
+
+                    } else if (copy.getP1Score() >= 40) {
+                        if (copy.getRunningTotal() > 10) {
+                            PigHoldAction hold = new PigHoldAction(this);
+                            game.sendAction(hold);
+                        } else {
+                            PigRollAction roll = new PigRollAction(this);
+                            game.sendAction(roll);
+                        }
+                    }
+                }
+
+            }
+
                 else if(Math.abs(copy.getP1Score() - copy.getP2Score()) > 10){
                     if(copy.getRunningTotal() > 10){
                         PigHoldAction hold = new PigHoldAction(this);
